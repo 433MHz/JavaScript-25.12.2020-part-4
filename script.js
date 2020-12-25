@@ -1,35 +1,19 @@
-var slideNumber = 1;
-var timer1;
-var timer2;
+var imageNumber = 1;
 
-function show()
+function insertImage()
 {
-	image = "<img src=\"img/slajd" + slideNumber + ".jpg\" width=\"600\" height=\"600\"/>"
-
-	document.getElementById("container").innerHTML = image;
-
-	slideNumber++;
-	if(slideNumber > 3){
-		slideNumber = 1;
+	var imgText = "<img src=\"img/slajd" + imageNumber + ".jpg\" width=\"650\" height=\"650\">";
+	document.getElementById("containerBottom").innerHTML = imgText;
+	$("#containerBottom").fadeIn(500);
+	imageNumber++;
+	setTimeout("insertImage()", 3000);
+	setTimeout("showOut()", 5000);
+	if(imageNumber > 3){
+		imageNumber = 1;
 	}
-	timer1 = setTimeout("show()" , 5000);
-	showIn();
-	timer2 = setTimeout("showOut()" , 4500);
-}
-
-function showIn(){
-	$("#container").fadeIn(500);
 }
 
 function showOut()
 {
-	$("#container").fadeOut(500);
-}
-
-function choose(button)
-{
-	slideNumber = button;
-	clearTimeout(timer1);
-	clearTimeout(timer2);
-	show();
+	$("#containerBottom").fadeOut(500);
 }

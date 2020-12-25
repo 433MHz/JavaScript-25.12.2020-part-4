@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>title</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src='script.js'></script>
 </head>
-<body onload="show();">
-
-	<div id="container"></div>
-	<div id="secondContainer">
-		<input type="submit" name="1" onclick="choose(1)">
-		<input type="submit" name="2" onclick="choose(2)">
-		<input type="submit" name="3" onclick="choose(3)">
+<body onload="insertImage();">
+	<div id="containerTop">
+		<input type="submit" value="1">
+		<input type="submit" value="2">
+		<input type="submit" value="3">
 	</div>
+	<div id="containerBottom"></div>
+
 </body>
 </html>
