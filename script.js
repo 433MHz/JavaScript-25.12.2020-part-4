@@ -1,4 +1,6 @@
 var slideNumber = 1;
+var timer1;
+var timer2;
 
 function show()
 {
@@ -10,9 +12,9 @@ function show()
 	if(slideNumber > 3){
 		slideNumber = 1;
 	}
-	setTimeout("show()" , 2000);
+	timer1 = setTimeout("show()" , 5000);
 	showIn();
-	setTimeout("showOut()" , 1500);
+	timer2 = setTimeout("showOut()" , 4500);
 }
 
 function showIn(){
@@ -22,4 +24,12 @@ function showIn(){
 function showOut()
 {
 	$("#container").fadeOut(500);
+}
+
+function choose(button)
+{
+	slideNumber = button;
+	clearTimeout(timer1);
+	clearTimeout(timer2);
+	show();
 }

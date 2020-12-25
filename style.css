@@ -8,3 +8,10 @@
 	height: 600;
 	text-align: center;
 }
+
+input[type="submit"]
+{
+	width: 100px;
+	height: 30px;
+	margin: 20px;
+}
